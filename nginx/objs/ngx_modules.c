@@ -37,6 +37,7 @@ extern ngx_module_t  ngx_http_core_module;
 extern ngx_module_t  ngx_http_log_module;
 extern ngx_module_t  ngx_http_upstream_module;
 extern ngx_module_t  ngx_http_static_module;
+extern ngx_module_t  ngx_http_dav_module;
 extern ngx_module_t  ngx_http_autoindex_module;
 extern ngx_module_t  ngx_http_index_module;
 extern ngx_module_t  ngx_http_mirror_module;
@@ -113,6 +114,7 @@ ngx_module_t *ngx_modules[] = {
     &ngx_http_log_module,
     &ngx_http_upstream_module,
     &ngx_http_static_module,
+    &ngx_http_dav_module,
     &ngx_http_autoindex_module,
     &ngx_http_index_module,
     &ngx_http_mirror_module,
@@ -191,6 +193,7 @@ char *ngx_module_names[] = {
     "ngx_http_log_module",
     "ngx_http_upstream_module",
     "ngx_http_static_module",
+    "ngx_http_dav_module",
     "ngx_http_autoindex_module",
     "ngx_http_index_module",
     "ngx_http_mirror_module",

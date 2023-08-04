@@ -210,6 +210,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/ngx_http_copy_filter_module.o \
 	objs/src/http/modules/ngx_http_not_modified_filter_module.o \
 	objs/src/http/modules/ngx_http_static_module.o \
+	objs/src/http/modules/ngx_http_dav_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_index_module.o \
 	objs/src/http/modules/ngx_http_mirror_module.o \
@@ -369,6 +370,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/ngx_http_copy_filter_module.o \
 	objs/src/http/modules/ngx_http_not_modified_filter_module.o \
 	objs/src/http/modules/ngx_http_static_module.o \
+	objs/src/http/modules/ngx_http_dav_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_index_module.o \
 	objs/src/http/modules/ngx_http_mirror_module.o \
@@ -1114,6 +1116,13 @@ objs/src/http/modules/ngx_http_static_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_static_module.o \
 		src/http/modules/ngx_http_static_module.c
+
+
+objs/src/http/modules/ngx_http_dav_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_dav_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_dav_module.o \
+		src/http/modules/ngx_http_dav_module.c
 
 
 objs/src/http/modules/ngx_http_autoindex_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
