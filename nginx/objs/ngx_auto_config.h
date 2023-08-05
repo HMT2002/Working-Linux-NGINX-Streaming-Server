@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --with-http_dav_module --add-module=../nginx-rtmp-module"
+#define NGX_CONFIGURE " --add-module=../nginx-rtmp-module --add-module=../nginx-upload-module --with-http_dav_module"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) "

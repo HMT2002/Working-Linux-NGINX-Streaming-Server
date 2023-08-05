@@ -271,6 +271,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/addon/dash/ngx_rtmp_mp4.o \
 	objs/addon/nginx-rtmp-module/ngx_rtmp_stat_module.o \
 	objs/addon/nginx-rtmp-module/ngx_rtmp_control_module.o \
+	objs/addon/nginx-upload-module/ngx_http_upload_module.o \
 	objs/ngx_modules.o
 
 	$(LINK) -o objs/nginx \
@@ -431,6 +432,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/addon/dash/ngx_rtmp_mp4.o \
 	objs/addon/nginx-rtmp-module/ngx_rtmp_stat_module.o \
 	objs/addon/nginx-rtmp-module/ngx_rtmp_control_module.o \
+	objs/addon/nginx-upload-module/ngx_http_upload_module.o \
 	objs/ngx_modules.o \
 	-ldl -lpthread -lcrypt -lpcre -lssl -lcrypto -ldl -lpthread -lz \
 	-Wl,-E
@@ -1543,6 +1545,13 @@ objs/addon/nginx-rtmp-module/ngx_rtmp_control_module.o:	$(ADDON_DEPS) \
 	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
 		-o objs/addon/nginx-rtmp-module/ngx_rtmp_control_module.o \
 		../nginx-rtmp-module/ngx_rtmp_control_module.c
+
+
+objs/addon/nginx-upload-module/ngx_http_upload_module.o:	$(ADDON_DEPS) \
+	../nginx-upload-module/ngx_http_upload_module.c
+	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
+		-o objs/addon/nginx-upload-module/ngx_http_upload_module.o \
+		../nginx-upload-module/ngx_http_upload_module.c
 
 
 manpage:	objs/nginx.8
