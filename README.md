@@ -4,6 +4,7 @@ This build include NGINX RTMP mofule from <a>https://github.com/arut/nginx-rtmp-
 ### Installing the Build Tools
 
     sudo apt update
+    sudo apt upgrade
     sudo apt install build-essential git
 
 ### Installing Dependencies
@@ -40,8 +41,21 @@ Remember to check your server linux IP address. Here I use the following IPv4 co
 You need to change your Gateway into the same with a reachable address on your computer. For example: If you want to streaming to your LAN such as Wifi, make sure the Gateway on the server is the same with the Network Default gateway of the network. And other machine can also reach the server through this gateway. AND ESPECIALLY your server address should be something different from the default gateway, just like the above.
 And the DNS need to change to the above also.
 I use ffmpeg to converting video to stream, so you need to install it on Linux or Windows.
+With Windows, download FFMPEG built programs, add the folder to environment path.
+With Linux, install with apt
+
+    sudo apt install ffmpeg
+
 .sh file for Linux, .bat for Windows
 You also need to change the IP destination in the executeable scripts. The default is 172.30.0.101, you need to change it to your server's address.
+
+Orrrr you can just use the "stream_file_ip_mkv", "stream_file_ip_mp4" scripts, .bat for Windows and .sh for Linux, of course.
+mp4 to stream mp4 file, mkv for ... you get what I mean.
+Here we use the test.mkv video.
+
+    ~ stream_file_ip_mkv test <IP>
+
+The stream will be available at `rtmp:<IP>/live/test_mkv`
 
 <h4>Streaming Linux</h4>
 
