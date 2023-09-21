@@ -51,7 +51,7 @@ You also need to change the IP destination in the executeable scripts. The defau
 
 Orrrr you can just use the "stream_file_ip_mkv", "stream_file_ip_mp4" scripts, .bat for Windows and .sh for Linux, of course.
 mp4 to stream mp4 file, mkv for ... you get what I mean.
-Here we use the test.mkv video.
+Here we use the `test.mkv` video.
 
     ~ stream_file_ip_mkv test <IP>
 
