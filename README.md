@@ -11,6 +11,14 @@ This build include NGINX RTMP mofule from <a>https://github.com/arut/nginx-rtmp-
 
     sudo apt install libpcre3-dev libssl-dev zlib1g-dev
 
+### Clone Git
+
+    git clone https://github.com/HMT2002/Working-Linux-NGINX-Streaming-Server.git
+
+Go to git.
+
+    cd Working-Linux-NGINX-Streaming-Server
+
 
 ### Compiling
 
@@ -48,6 +56,8 @@ With Linux, install with apt
 
 .sh file for Linux, .bat for Windows
 You also need to change the IP destination in the executeable scripts. The default is 172.30.0.101, you need to change it to your server's address.
+
+    cd streamingfolder
 
 Orrrr you can just use the "stream_file_ip_mkv", "stream_file_ip_mp4" scripts, .bat for Windows and .sh for Linux, of course.
 mp4 to stream mp4 file, mkv for ... you get what I mean.
