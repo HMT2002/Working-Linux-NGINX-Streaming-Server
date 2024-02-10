@@ -40,6 +40,11 @@ Shutdown Nginx: `sudo /usr/local/nginx/sbin/nginx -s stop`
 ### Usage
 
 Remember to check your server linux IP address. Here I use the following IPv4 config on Nginx Server.
+Run
+
+    nmcli device show enp0s3 | grep 'IP'
+    or 
+    ip addr show
 
     Address: 172.30.0.101
     Netmask: 255.255.0.0
@@ -61,25 +66,31 @@ You also need to change the IP destination in the executeable scripts. The defau
 
 Orrrr you can just use the "stream_file_ip_mkv", "stream_file_ip_mp4" scripts, .bat for Windows and .sh for Linux, of course.
 mp4 to stream mp4 file, mkv for ... you get what I mean.
-Here we use the `test.mkv` video.
+Here we use the `reisen.mp4` video.
 
-    ~ stream_file_ip_mkv test <IP>
+    ~ stream_file_ip_mp4 test <IP>
 
-The stream will be available at `rtmp:<IP>/live/test_mkv`
+The stream will be available at `rtmp:<IP>/live/reisen_mp4`
 
 <h4>Streaming Linux</h4>
 
-Open terminal and run example file `streamreisenpublic1.sh` with your server's IP address `rtmp:<IP>/live/reisenpublic`
+Open terminal and run example file `streamreisenpublic.sh` with your server's IP address `rtmp:<IP>/live/reisenpublic`
 
 <h4>Streaming Windows</h4>
 
-Open `cmd` and run example file `streamreisenpublic1.bat` with your server's IP address `rtmp:<IP>/live/reisenpublic`
+Open `cmd` and run example file `streamreisenpublic.bat` with your server's IP address `rtmp:<IP>/live/reisenpublic`
 
 <h4>Accessing</h4>
 
-You can use VLC to access to the RTMP Streaming: `rtmp://<IP>/live/reisenpublic`
+You can use VLC to access to the RTMP Streaming: `rtmp://<IP>/live/streamreisenpublic`
 
-or HLS Streaming: `http://172.30.0.101/tmp/hls/reisenpublic.m3u8`
+or HLS Streaming:
+
+    http://<IP>/tmp/hls/streamreisenpublic.m3u8
+
+or DASH Streaming: 
+
+    http://<IP>/tmp/dash/streamreisenpublic.mpd
 
 ### P/S
 
